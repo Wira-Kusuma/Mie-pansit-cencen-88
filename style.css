@@ -2,7 +2,128 @@
     font-family: Arial, Helvetica, sans-serif;
 
 }
+body{* {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
 body{
+    margin: 0px; 
+    padding: 0px;
+    background-color:antiquewhite;
+    width: 100%;
+    max-width: 100%;
+
+
+}
+.kontak {
+    padding: 10px;
+}
+.header {
+    padding-top: 20px;
+    background-color:rgb(184, 136, 73);
+    text-align: center;
+    overflow-x: auto;
+}
+.section1{
+    background-color:burlywood;
+    width: 100%;
+    max-width: 100%;
+    margin: 0px auto;
+    
+}
+.section2{
+    padding: 10px;
+}
+table{
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 15px;
+}
+a{
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+.sosmed a{
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px black solid;
+    padding: 2px 20px;
+    border-radius: 20px;
+    background-color: aliceblue;
+    color: black;
+}
+.sosmed{
+    flex-wrap: wrap;
+    display: flex;
+    gap: 5px;
+    
+}
+.nav{
+    position: fixed;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    background-color:burlywood;
+    width: 100%;
+    padding: 10px 0px;
+    
+    
+
+}
+.isinav{
+    background-color: burlywood;
+    text-align: center;
+    width: 30%;
+    border: 1px solid;
+    margin: -10px 0px;
+    padding: 5px;
+}
+.testimoni{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.testimoni img{
+    border: 1px solid color(burlywood);
+    border-radius: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.gabung1{
+    display: flex;
+    flex-wrap: wrap;
+}
+.gabung2{
+    display: flex;
+    flex-wrap: wrap;
+}
+.gabung2 .peta{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-content: right;
+    margin-left: auto;
+    max-width: 100%;
+    border: 1px solid;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 10px;
+    background-color:burlywood;
+}
+.peta{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+iframe{
+    width: auto;
+    max-width: 100%;
+}
     margin: 0px; 
     padding: 0px;
     background-color:antiquewhite;
