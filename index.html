@@ -28,151 +28,137 @@
     
     <!-- Robots -->
     <meta name="robots" content="index, follow">
-    <title>Mie pansit Cencen 88</title>
-    <style>
-        *{
-            font-family: arial;
-        }
-        body{
-            margin: 0;
-            padding: 0;
-            background-color: whitesmoke;
-            width: auto;
-            max-width: 100%;
-            overflow-x: hidden;
-        }
-        .container1{
-            flex-wrap: wrap;
-            display:flex;
-            background-color: aliceblue;
-            padding-bottom: 10px;
-            box-shadow: 0 0 8px;
-            width: 100%;
-            max-width: 100%;
-            flex-grow: 1;
-        }
-        .container1 h1{
-            padding-left: 30px;
-            padding-top: 10px;
-        }
-        .natvigasi{
-            margin-left: auto;
-            padding: 20px;
-            flex-wrap: wrap;
-            display: flex;
-            gap: 10px;
-        }
-        .natvigasi button{
-            margin: 10px 10px;
-            margin-bottom: 10px;
-            border: none;
-            border-radius: 10px;
-            padding: 10px 10px;
-            box-shadow: 0 0 3px;
 
+    <style>
+        * {
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
         }
-        .natvigasi button:hover{
-            transform: scale(0.8);
-        }
-        .isi .des1{
-            padding: 20px;
-        }
-        .isi {
-            
-            flex-wrap: wrap;
-            width: auto;
-            max-width: 100%;
-            justify-content: center; /* Pusatkan secara horizontal */
-            align-items: center; /* Pusatkan secara vertikal */
-            height: 100vh; /* Buat kontainer setinggi layar */
-            padding: 10px;
-            flex: 1;
-        }
-        .isi .pesan{
-            justify-content: center;
-            align-items: center;
-            padding-left: 60px;
-        }
-        .pesan button{
-            padding: 10px;
-            border-radius: 10px;
-            border: 1px solid;
-            background-color: red;
-            font-weight: bold;
-            margin: 10px;
-        }
-        .pesan button:hover{
-            transform: scale(1.5);
-        }
+
         html, body {
             height: 100%;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
+            background-color: whitesmoke;
+        }
+
+        .container1 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            background-color: aliceblue;
+            padding: 15px 30px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        .natvigasi {
+            display: flex;
+            gap: 10px;
+        }
+
+        .natvigasi button {
+            border: none;
+            border-radius: 10px;
+            padding: 10px 15px;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .natvigasi button:hover {
+            transform: scale(1.1);
+        }
+
+        .isi {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .isi img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .des1 {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .pesan {
+            margin-top: 20px;
+        }
+
+        .pesan button {
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: none;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .pesan button:hover {
+            transform: scale(1.1);
         }
 
         footer {
-            background-color: rgb(184, 136, 73);
+            background-color: aliceblue;
             text-align: center;
-            width: 100%;
-            height: auto; /* Sesuaikan tinggi dengan konten */
-            padding: 20px; /* Tambahkan padding agar lebih rapi */
-            position: relative; /* Hindari footer menimpa konten */
-            bottom: 0;
-            }
+            padding: 20px;
+            margin-top: auto;
+        }
 
     </style>
 </head>
 <body>
     <div class="container1">
-        <h1>Mie pansit cencen</h1>
+        <h1>Mie Pansit Cencen 88</h1>
         <div class="natvigasi">
-            <div><button onclick="document.getElementById('').scrollIntoView();">Menu Makanan / minuman</button></div>
-            <div><button onclick="window.location.href='';">Lamaran Pekerjaan</button></div>
+            <button onclick="document.getElementById('menu').scrollIntoView();">Menu Makanan / Minuman</button>
+            <button onclick="window.location.href='';">Lamaran Pekerjaan</button>
         </div>
     </div>
 
     <div class="isi">
-        <img src="Foto-rumah.jpg" alt="Photo" width="100%" height="auto">
+        <img src="Foto-rumah.jpg" alt="Foto Rumah Makan" width="100%">
         <div class="des1">
-            <p><b>Lokasi</b> : Medan Jalan Serbaguna, No 885 ,  Helvetia</p>
-            <p><b>No.Telepon : </b>(gausah lah, nanti kena spam telepon)</p>
-            <p>
-            <b>Jam operasional :</b>
+            <p><b>Lokasi:</b> Medan, Jalan Serbaguna, No 885, Helvetia</p>
+            <p><b>No. Telepon:</b> (Tidak dicantumkan untuk menghindari spam)</p>
+            <p><b>Jam Operasional:</b></p>
             <ul>
-                <li style="padding-bottom: 5px; font-weight: bold;">Pagi - siang : 06:00 - 13:00 WIB</li>
-                <li style="font-weight: bold;">sore - malam : 05:00 - 09:00 WIB</li>
+                <li><b>Pagi - Siang:</b> 06:00 - 13:00 WIB</li>
+                <li><b>Sore - Malam:</b> 17:00 - 21:00 WIB</li>
             </ul>
         </div>
+
         <div class="pesan">
-            <button onclick="window.location.href='';">Pesan Online sekarang!</button>
+            <button onclick="window.location.href='';">Pesan Online Sekarang!</button>
         </div>
-    
-    
+
         <hr>
         <h2>Deskripsi Toko</h2>
-        <p><b>Toko Mie pansit cencen 88</b> menghadirkan berbagai makanan, berlokasi di <b>Sumatera Utara, Medan tepatnya ada di deli serdang</b></p>
-        <p>Di sini menjual makanan dan minuman seperti <b>bakmi, mie pansit,mie sop, kari ayam,</b> dan juga ada <b>nasi dan minuman seperti kopi, teh manis, dst.</b></p> <hr>
-        
-            
-                
-    </div>
-            
-        
+        <p><b>Toko Mie Pansit Cencen 88</b> menghadirkan berbagai makanan lezat, berlokasi di <b>Sumatera Utara, Medan, tepatnya di Deli Serdang</b>.</p>
+        <p>Menu kami meliputi <b>Bakmi, Mie Pansit, Mie Sop, Kari Ayam</b>, serta aneka <b>nasi dan minuman seperti kopi dan teh manis</b>.</p>
+        <hr>
     </div>
 
-    <footer style="background-color:rgb(184, 136, 73); text-align: center; width: auto; max-width: 100%; height: 200px;">
-        <div style="padding-top: 20px; ">
-           <b> &copy; 2025 All rights reserved</b>
-            <p>Ikutlah berkontribusi dalam Pegembangan website ini 
+    <footer>
+        <b>&copy; 2025 All Rights Reserved</b>
+        <p>Ikutlah berkontribusi dalam pengembangan website ini:
             <a href="https://github.com/Wira-Kusuma/Mie-pansit-cencen-88" target="_blank"><b>GitHub</b></a>
-            <br>
-            <br> 
-            Terima Kasih Kepada Kontributor : 
-            <br><b>Wira Kusuma Phandawa</b>     
-            </p>
-        </div>
+        </p>
+        <p>Terima kasih kepada kontributor: <b>Wira Kusuma Phandawa</b></p>
     </footer>
 </body>
 </html>
