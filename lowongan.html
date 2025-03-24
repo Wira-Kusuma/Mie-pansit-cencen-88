@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lowongan Pekerjaan</title>
+    <style>
+        *{
+            font-family: arial;
+        }
+        body{
+            margin: 0px;
+            padding: 0px;
+            background-color: azure;
+            width: auto;
+            max-width: 100%;
+        }
+        .kotak{
+            width: 250px;
+            max-width: 100%;
+            height: auto;
+            margin-left: auto ;
+            margin-right: auto;
+            border: 1px;
+            box-shadow: 0px 0px 5px 0.5px;
+            padding: 10px 30px;
+            border-radius: 10px;
+            background-color: aliceblue;
+            margin-top: 50px;
+        }
+        .kotak h1{
+            text-align: center;
+        }
+        .form{
+            align-items: center;
+            display: flex; /*Supaya bisa di bawah*/
+            flex-direction: column;
+            width: fit-content;
+            max-width: 100%;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px 0.5px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            }
+            .form input{
+                width: 250px;
+                max-width: auto;
+                height: 40px;
+                margin: 10px 0px;
+                border-radius: 10px;
+                border: 0px;
+                box-shadow: 5px 5px 10px 0.1px;
+                text-align: center;
+            }
+            .form button{
+                width: 100px;
+                height: 30px;
+                border-radius: 10px;
+                border: 0px;
+                box-shadow: 0px 0px 10px 0.5px;
+                margin: 20px 0px;
+                font-weight: bold;
+                transition: transform 0.2s ease-in-out;
+            }
+            li{
+                padding: 5px 0px;
+            }
+            .kembali{
+                margin-left: auto;
+                margin-right: auto;
+                width: fit-content;
+                max-width: 100%;
+                height: auto;
+                margin-bottom: 50px;
+            }
+            .kembali button{
+                width: 100px;
+                height: 30px;
+                border-radius: 10px;
+                border: 0px;
+                box-shadow: 0px 0px 10px 0.5px;
+                transition: transform 0.2s ease-in-out;
+            }
+            .form button:hover{
+                transform: scale(0.9);
+            }
+            .kembali button:hover{
+                transform: scale(0.9);
+            }
+    </style>
+</head>
+<body>
+    
+    <div class="kotak">
+        <h1>Tersedia Lowongan</h1>
+        <hr>
+        <p>Lowongan pekerjaan sebagai karyawan toko. <br> <br> Syarat syarat: </p>
+        <ul>
+            <li>Wanita</li>
+            <li>Terbiasa dengan pekerjaan rumah</li>
+            <li>Jam Kerja pagi - siang (setengah hari)</li>
+            <li>Tempat Tinggal dekat</li>
+            <li>bisa bangun pagi</li>
+        </ul>
+    </div>
+    <div class="form">
+        <h1>Form</h1>
+        <input type="text" name="Nama" id="nama" placeholder="Nama">
+        <input type="tel" name="No" id="no" placeholder="Nomor Telepon">
+        <p style="color: red;">*maaf lowongan belum tersedia</p>
+        <button type="submit" disabled onclick="window.location.href='';">Kirim</button>
+
+        
+    </div>
+
+    <div class="kembali">
+        <button>Kembali</button>
+    </div>
+</body>
+</html>
