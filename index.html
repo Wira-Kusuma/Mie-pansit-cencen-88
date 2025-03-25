@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    
+
     <!-- SEO Metadata -->
     <title>Mie Pansit Cencen 88 - Mie Pansit Lezat dengan Resep Autentik</title>
     <meta name="description" content="Mie Pansit Cencen 88 menyajikan mie pansit dengan cita rasa khas dan resep turun-temurun. Nikmati kelezatan setiap gigitan!">
@@ -30,15 +30,27 @@
     <!-- Robots -->
     <meta name="robots" content="index, follow">
 
-
 </head>
 <body>
     <div class="container1">
-        <h1>Mie Pansit Cencen 88</h1>
-        <div class="natvigasi">
-            <button onclick="document.getElementById('menu').scrollIntoView();">Menu Makanan / Minuman</button>
-            <button onclick="window.location.href='Lowongan.html';">Lowongan Pekerjaan</button>
-        </div>
+        <h1 style="display: flex; width: auto; max-width: 70%;">Mie Pansit cencen 88</h1>
+        <nav>
+
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="Lowongan.html">Lowongan kerja</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    
+        <script>
+            function toggleMenu() {
+                const menu = document.querySelector(".menu");
+                menu.classList.toggle("active");
+            }
+        </script>
     </div>
 
     <div class="isi">

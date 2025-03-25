@@ -12,6 +12,69 @@ html, body {
     background-color: whitesmoke;
 }
 
+/* natvigasi */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: inherit;
+    padding: 10px 20px;
+    color: white;
+}
+.menu {
+    list-style: none;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+}
+.menu li {
+    margin: 0 15px;
+    width: fit-content;
+    height: fit-content;
+    margin: 15px 20px 0px 0px ;
+    flex-grow: 1;
+}
+.menu a {
+    color: black;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px 20px;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+.hamburger {
+    font-size: 28px;
+    display: none;
+    cursor: pointer;
+    color: black;
+}
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: aliceblue;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        width: fit-content;
+        height: 190px;
+        text-align: center;
+        border-radius: 5px;
+        border: 1px solid black;
+    }
+    .menu.active {
+        display: flex;
+    }
+    .hamburger {
+        display: block;
+    }
+}
+/* /natvigasi */
+
 .container1 {
     display: flex;
     align-items: center;
@@ -21,24 +84,6 @@ html, body {
     padding: 15px 30px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     width: 100%;
-}
-
-.natvigasi {
-    display: flex;
-    gap: 10px;
-}
-
-.natvigasi button {
-    border: none;
-    border-radius: 10px;
-    padding: 10px 15px;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-}
-
-.natvigasi button:hover {
-    transform: scale(1.1);
 }
 
 .isi {
