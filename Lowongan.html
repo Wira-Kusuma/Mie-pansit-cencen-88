@@ -95,68 +95,103 @@
         .kembali button:hover{
             transform: scale(0.9);
         }
-        /* natvigasi */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: inherit;
-            padding: 10px 20px;
-            color: white;
-        }
-        .menu {
-            list-style: none;
-            display: flex;
-            width: fit-content;
-            height: fit-content;
-        }
-        .menu li {
-            margin: 0 15px;
-            width: fit-content;
-            height: fit-content;
-            margin: 15px 20px 0px 0px ;
-            flex-grow: 1;
-        }
-        .menu a {
-            color: black;
-            text-decoration: none;
-            border: 1px solid black;
-            border-radius: 10px;
-            padding: 5px 20px;
-            width: auto;
-            max-width: 100%;
-            height: auto;
-            max-height: 100%;
-        }
-        .hamburger {
-            font-size: 28px;
-            display: none;
-            cursor: pointer;
-            color: black;
-        }
-        /* Responsif untuk layar kecil */
-        @media (max-width: 768px) {
-            .menu {
-                display: none;
-                flex-direction: column;
-                background: aliceblue;
-                position: absolute;
-                top: 50px;
-                right: 20px;
-                width: fit-content;
-                height: 190px;
-                text-align: center;
-                border-radius: 5px;
-                border: 1px solid black;
-            }
-            .menu.active {
-                display: flex;
-            }
-            .hamburger {
-                display: block;
-            }
-        }
-        /* /natvigasi */
+        /* Header & Navigasi */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px 1px 5px 0.1px black;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    margin-left: auto; /* Memindahkan ke kanan */
+}
+
+.menu li {
+    margin: 0 10px;
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 5px 15px;
+    transition: background 0.3s;
+}
+
+.menu a:hover {
+    background-color: lightgray;
+}
+
+/* Hamburger Menu (untuk layar kecil) */
+.hamburger {
+    font-size: 28px;
+    display: none;
+    cursor: pointer;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .header h1{
+        width: 60%;
+    }
+    .header{
+        margin-bottom: 20px;
+    }
+    
+    .content1 {
+        flex-direction: column;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .content1 .teks {
+        max-width: 100%;
+        padding: 20px;
+        font-size: larger;
+        margin-top: 20px;
+    }
+    .content1 img {
+        width: 250px;
+    }
+    .teks button{
+        margin-top: 100px;
+    }
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: aliceblue;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: fit-content;
+        height: auto;
+        text-align: center;
+        border-radius: 5px;
+        border: 1px solid black;
+        padding: 10px;
+    }
+    .menu.active {
+        display: flex;
+    }
+    .hamburger {
+        display: block;
+    }
+}
 
         .container1 {
             display: flex;
@@ -180,18 +215,18 @@
     </style>
 </head>
 <body>
-    <div class="container1">
-        <h1 style="display: flex; width: auto; max-width: 70%;">Mie Pansit cencen 88</h1>
+    <header class="header">
+        <h1>Mie Pansit Cencen 88</h1>
         <nav>
-
             <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
             <ul class="menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="Lowongan.html">Lowongan kerja</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="Lowongan.html">Lowongan Kerja</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
+    </header>
     
         <script>
             function toggleMenu() {

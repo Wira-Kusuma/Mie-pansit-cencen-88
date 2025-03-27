@@ -1,56 +1,60 @@
 * {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html, body {
     height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
     background-color: whitesmoke;
 }
 
-/* natvigasi */
-nav {
+/* Header & Navigasi */
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: inherit;
-    padding: 10px 20px;
-    color: white;
+    padding: 25px 20px;
+    box-shadow: 0px 1px 5px 0.1px black;
+    background-color: white;
+    margin-bottom: 10px;
 }
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
 .menu {
     list-style: none;
     display: flex;
-    width: fit-content;
-    height: fit-content;
+    margin-left: auto; /* Memindahkan ke kanan */
 }
+
 .menu li {
-    margin: 0 15px;
-    width: fit-content;
-    height: fit-content;
-    margin: 15px 20px 0px 0px ;
-    flex-grow: 1;
+    margin: 0 10px;
 }
+
 .menu a {
     color: black;
     text-decoration: none;
-    border: 1px solid black;
     border-radius: 10px;
-    padding: 5px 20px;
-    width: auto;
-    max-width: 100%;
-    height: auto;
-    max-height: 100%;
+    padding: 5px 15px;
+    transition: background 0.3s;
 }
+
+.menu a:hover {
+    background-color: lightgray;
+}
+
+/* Hamburger Menu (untuk layar kecil) */
 .hamburger {
     font-size: 28px;
     display: none;
     cursor: pointer;
-    color: black;
 }
+
 /* Responsif untuk layar kecil */
 @media (max-width: 768px) {
     .menu {
@@ -58,13 +62,14 @@ nav {
         flex-direction: column;
         background: aliceblue;
         position: absolute;
-        top: 50px;
+        top: 60px;
         right: 20px;
         width: fit-content;
-        height: 190px;
+        height: auto;
         text-align: center;
         border-radius: 5px;
         border: 1px solid black;
+        padding: 10px;
     }
     .menu.active {
         display: flex;
@@ -73,64 +78,158 @@ nav {
         display: block;
     }
 }
-/* /natvigasi */
 
-.container1 {
+/* Konten Utama */
+.content1 {
+    /* background-color: darkslategray; */
+    background-image: url(Foto-rumah.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 50px;
     flex-wrap: wrap;
-    background-color: aliceblue;
-    padding: 15px 30px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
 }
 
-.isi {
-    flex: 1;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.isi img {
+.content1 .teks {
+    max-width: 50%;
     max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 0.5px;
 }
 
-.des1 {
-    margin-top: 20px;
-    text-align: left;
+.teks button{
+    margin-top: 30px;
 }
 
-.pesan {
-    margin-top: 20px;
+.content1 img {
+    width: 400px;
+    max-width: 100%;
+    margin-right: 30px;
 }
 
-.pesan button {
-    padding: 10px 20px;
-    border-radius: 10px;
+.teks button {
+    padding: 10px;
+    border-radius: 5px;
     border: none;
+    font-size: large;
     background-color: red;
     color: white;
-    font-weight: bold;
     cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-    box-shadow: 10px 5px 40px 1px black;
+    transition: transform 0.2s, background 0.3s;
 }
 
-.pesan button:hover {
+.teks button:hover {
+    transform: scale(0.95);
+    background-color: darkred;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .header h1{
+        width: 60%;
+    }
+    .header{
+        margin-bottom: 20px;
+    }
+    
+    .content1 {
+        flex-direction: column;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .content1 .teks {
+        max-width: 100%;
+        padding: 20px;
+        font-size: larger;
+        margin-top: 20px;
+    }
+    .content1 img {
+        width: 250px;
+    }
+    .teks button{
+        margin-top: 100px;
+    }
+}
+
+.kontainer {
+    margin-top: 50px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.kontainer .card{
+    text-align: center;
+    border-radius: 10px;
+    border: 1px;
+    box-shadow: 0px 0px 5px 0.1px;
+    max-width: 100%;
+    width:300px;
+    height:160px;
+    padding: 20px;
+    margin: 10px;
+    flex-wrap: wrap;
+    transition: transform 0.2s ease-in-out;
+}
+
+.kontainer .card:hover{
     transform: scale(1.1);
 }
 
-footer {
-    background-color: aliceblue;
-    text-align: center;
-    padding: 20px;
-    margin-top: auto;
-    box-shadow: 0px 10px 10px 5px;
+@media (max-width: 768px) {
+    .kontainer .card{
+        margin-bottom: 20px;
+    }
+}
+
+.kontainertabel{
+    margin: 20px;
+    border: 1px solid;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.kontainertabel th{
+    padding: 10px;
+    width: auto;
+    height: fit-content;
+    border: 1px solid;
+    
+}
+
+.kontainertabel td{
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.kontainertabel img{
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.tabel1 {
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .tabel1 {
+        width: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .kontainertabel{
+        margin: 0px;
+        height: fit-content;
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
