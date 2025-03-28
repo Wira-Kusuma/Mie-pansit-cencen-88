@@ -1,7 +1,6 @@
 # Mie-pansit-cencen-88
 Mie pansit cencen 88 <br> 
 Website: 
-<a href="https://wira-kusuma.github.io/Mie-pansit-cencen-88/
-" title="https://wira-kusuma.github.io/Mie-pansit-cencen-88/
-" target="_blank">https://wira-kusuma.github.io/Mie-pansit-cencen-88/
+<a href="https://wira-kusuma.github.io/Mie-pansit-cencen-88/"
+target="_blank">https://wira-kusuma.github.io/Mie-pansit-cencen-88/
 </a>
