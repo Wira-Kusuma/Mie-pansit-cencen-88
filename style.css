@@ -326,3 +326,10 @@ nav {
     }
 }
 
+footer {
+    background-color: aliceblue;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    box-shadow: 0px 10px 10px 5px;
+}
