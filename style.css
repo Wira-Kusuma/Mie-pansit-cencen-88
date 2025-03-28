@@ -7,7 +7,7 @@
 
 html, body {
     height: 100%;
-    background-color: whitesmoke;
+    background-color: white;
     overflow-x: hidden;
 }
 
@@ -18,7 +18,7 @@ html, body {
     align-items: center;
     padding: 25px 20px;
     box-shadow: 0px 1px 5px 0.1px black;
-    background-color: white;
+    background-color: aliceblue;
     margin-bottom: 10px;
 }
 
@@ -110,6 +110,11 @@ nav {
     width: 400px;
     max-width: 100%;
     margin-right: 30px;
+    transition: ease-in-out 0.2s;
+}
+
+.content1 img:hover{
+    transform: scale(1.5);
 }
 
 .teks button {
@@ -163,25 +168,27 @@ nav {
     display: flex;
     justify-content: space-around;
     max-width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
 }
 
 .kontainer .card{
     text-align: center;
     border-radius: 10px;
-    border: 1px;
-    box-shadow: 0px 0px 5px 0.1px;
+    border: 1px solid;
     max-width: 100%;
     width:300px;
     height:160px;
     padding: 20px;
     margin: 10px;
     flex-wrap: wrap;
+    background-color: aliceblue;
     transition: transform 0.2s ease-in-out;
 }
 
 .kontainer .card:hover{
     transform: scale(1.1);
+    box-shadow: -1px 1px 5px 0.1px;
+    border: none;
 }
 
 @media (max-width: 768px) {
@@ -192,7 +199,6 @@ nav {
 
 .kontainertabel{
     margin: 10px;
-    width: 100%;
     max-width: 100%;
     height: fit-content;
     display: flex;
@@ -202,7 +208,6 @@ nav {
 
 .kontainertabel th{
     padding: 10px;
-    width: auto;
     height: fit-content;
 }
 
@@ -219,25 +224,90 @@ nav {
 
 .tabel1, .tabel2 {
     border: 1px solid;
-    margin-bottom: 20px;
+    background-color: aliceblue;
 }
 .map {
-    width: auto;
     height: fit-content;
-    max-width: 100%;
-    margin-left: 200px;
+    max-height: fit-content;
+    max-width: fit-content;
+    margin: 0px auto;
     border: 2px solid;
     border-radius: 10px;
+    background-color: aliceblue;
+    margin-bottom: 20px;
 }
 .map iframe{
     margin: 10px;
     
 }
+
+.lowongankerja {
+    width: fit-content;
+    height: fit-content;
+    max-width: 100%;
+    border-radius: 10px;
+    border: 1px solid;
+    padding: 30px;
+    flex-wrap: wrap;
+    background-color: aliceblue;
+}
+
+.lowongankerja li{
+    margin: 5px;
+}
+
+.form {
+    background-color: aliceblue;
+    margin-top: 50px;
+    align-items: center;
+    display: flex; /*Supaya bisa di bawah*/
+    flex-direction: column;
+    width: fit-content;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0.5px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.form input{
+    width: 250px;
+    max-width: auto;
+    height: 40px;
+    margin: 10px 0px;
+    border-radius: 10px;
+    border: 0px;
+    box-shadow: 0px 0px 5px 0.1px;
+    text-align: center;
+}
+
+.form button{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: 0px;
+    box-shadow: 0px 0px 10px 0.5px;
+    margin: 20px 0px;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+}
+
+.bagian2 {
+    margin: 0px auto;
+    max-width: 100%;
+    justify-content: center;
+}
+
 @media (max-width: 768px) {
-    .tabel1 , .tabel2{
+    .tabel1, .tabel2{
         max-width: 100%;
-        margin-bottom: 20px;
         padding: 0;
+        margin: 0px auto;
     }
 
     .kontainertabel{
@@ -247,5 +317,12 @@ nav {
     }
     .map{
         margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .lowongankerja {
+        margin: 0px auto;
+        margin-bottom: 20px;
     }
 }
+
