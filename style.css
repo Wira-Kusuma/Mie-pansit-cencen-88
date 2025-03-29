@@ -18,7 +18,7 @@ html, body {
     align-items: center;
     padding: 25px 20px;
     box-shadow: 0px 1px 5px 0.1px black;
-    background-color: aliceblue;
+    background-color: whitesmoke;
     margin-bottom: 10px;
 }
 
@@ -61,7 +61,8 @@ nav {
     .menu {
         display: none;
         flex-direction: column;
-        background: aliceblue;
+        background: whitesmoke
+;
         position: absolute;
         top: 60px;
         right: 20px;
@@ -87,7 +88,7 @@ nav {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    color: white;
+    color: whitesmoke;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -123,7 +124,7 @@ nav {
     border: none;
     font-size: large;
     background-color: red;
-    color: white;
+    color: whitesmoke;
     cursor: pointer;
     transition: transform 0.2s, background 0.3s;
 }
@@ -181,7 +182,7 @@ nav {
     padding: 20px;
     margin: 10px;
     flex-wrap: wrap;
-    background-color: aliceblue;
+    background-color: whitesmoke;
     transition: transform 0.2s ease-in-out;
 }
 
@@ -209,6 +210,7 @@ nav {
 .kontainertabel th{
     padding: 10px;
     height: fit-content;
+    border-bottom: 1px solid;
 }
 
 .kontainertabel td{
@@ -224,7 +226,7 @@ nav {
 
 .tabel1, .tabel2 {
     border: 1px solid;
-    background-color: aliceblue;
+    background-color: whitesmoke;
 }
 .map {
     height: fit-content;
@@ -233,7 +235,7 @@ nav {
     margin: 0px auto;
     border: 2px solid;
     border-radius: 10px;
-    background-color: aliceblue;
+    background-color: whitesmoke;
     margin-bottom: 20px;
 }
 .map iframe{
@@ -249,7 +251,7 @@ nav {
     border: 1px solid;
     padding: 30px;
     flex-wrap: wrap;
-    background-color: aliceblue;
+    background-color: whitesmoke;
 }
 
 .lowongankerja li{
@@ -257,7 +259,7 @@ nav {
 }
 
 .form {
-    background-color: aliceblue;
+    background-color: whitesmoke;
     margin-top: 50px;
     align-items: center;
     display: flex; /*Supaya bisa di bawah*/
@@ -327,9 +329,10 @@ nav {
 }
 
 footer {
-    background-color: aliceblue;
+    background-color: whitesmoke;
     text-align: center;
     padding: 20px;
-    margin-top: auto;
+    margin-top: 100px;
     box-shadow: 0px 10px 10px 5px;
 }
+
