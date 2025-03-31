@@ -21,6 +21,10 @@ html, body {
     background-color: whitesmoke;
     margin-bottom: 10px;
 }
+.header h1{
+    margin-left: 50px;
+    transition: ease-in-out 0.2s;
+}
 
 nav {
     display: flex;
@@ -61,8 +65,7 @@ nav {
     .menu {
         display: none;
         flex-direction: column;
-        background: whitesmoke
-;
+        background: whitesmoke;
         position: absolute;
         top: 60px;
         right: 20px;
@@ -84,7 +87,7 @@ nav {
 /* Konten Utama */
 .content1 {
     /* background-color: darkslategray; */
-    background-image: url(Foto-rumah.jpg);
+    background-image: url(img/Foto-rumah.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -97,10 +100,10 @@ nav {
 }
 
 .content1 .teks {
-    max-width: 50%;
-    max-width: 100%;
+    width: fit-content;
     font-size: larger;
     font-weight: bold;
+    margin: auto auto;
 }
 
 .teks button{
@@ -111,11 +114,16 @@ nav {
     width: 400px;
     max-width: 100%;
     margin-right: 30px;
-    transition: ease-in-out 0.2s;
+    animation: spin 11s linear infinite;
 }
 
-.content1 img:hover{
-    transform: scale(1.5);
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .teks button {
@@ -138,6 +146,7 @@ nav {
 @media (max-width: 768px) {
     .header h1{
         width: 60%;
+        margin-left: 0px;
     }
     .header{
         margin-bottom: 20px;
@@ -157,7 +166,13 @@ nav {
     }
     .content1 img {
         width: 250px;
+        margin: auto auto;
     }
+
+    .content1 img:hover {
+        transform: none;
+    }
+
     .teks button{
         margin-top: 100px;
     }
@@ -183,7 +198,7 @@ nav {
     margin: 10px;
     flex-wrap: wrap;
     background-color: whitesmoke;
-    transition: transform 0.2s ease-in-out;
+    transition:0.2s ease-in-out;
 }
 
 .kontainer .card:hover{
@@ -196,7 +211,13 @@ nav {
     .kontainer .card{
         margin-bottom: 20px;
     }
+
+    .kontainer .card:active{
+        transform: scale(1.1);
+    }
 }
+
+/* tabel menu */
 
 .kontainertabel{
     margin: 10px;
@@ -209,8 +230,7 @@ nav {
 
 .kontainertabel th{
     padding: 10px;
-    height: fit-content;
-    border-bottom: 1px solid;
+    /* border-bottom: 1px solid; */
 }
 
 .kontainertabel td{
@@ -229,6 +249,34 @@ nav {
     border-radius: 10px;
     background-color: whitesmoke;
 }
+
+@media (max-width: 768px) {
+    .tabel1, .tabel2{
+        max-width: 100%;
+        padding: 0;
+        margin: 0px auto;
+    }
+
+    .kontainertabel{
+        margin: 0px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .map{
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .lowongankerja {
+        margin: 0px auto;
+        margin-bottom: 20px;
+    }
+}
+
+/* end table */
+
+
+/* map iframe */
 .map {
     height: fit-content;
     max-height: fit-content;
@@ -244,6 +292,10 @@ nav {
     
 }
 
+/* end map iframe */
+
+/* lowongan */
+
 .lowongankerja {
     width: fit-content;
     height: fit-content;
@@ -258,6 +310,10 @@ nav {
 .lowongankerja li{
     margin: 5px;
 }
+
+/* end lowongan */
+
+/* form */
 
 .form {
     background-color: whitesmoke;
@@ -300,33 +356,14 @@ nav {
     transition: transform 0.2s ease-in-out;
 }
 
+/* end form */
+
+
+
 .bagian2 {
     margin: 0px auto;
     max-width: 100%;
     justify-content: center;
-}
-
-@media (max-width: 768px) {
-    .tabel1, .tabel2{
-        max-width: 100%;
-        padding: 0;
-        margin: 0px auto;
-    }
-
-    .kontainertabel{
-        margin: 0px;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .map{
-        margin: 0 auto;
-        margin-bottom: 20px;
-    }
-
-    .lowongankerja {
-        margin: 0px auto;
-        margin-bottom: 20px;
-    }
 }
 
 footer {
