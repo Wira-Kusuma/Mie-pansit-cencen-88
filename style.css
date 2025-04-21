@@ -17,28 +17,16 @@ html, body {
     justify-content: space-between;
     align-items: center;
     padding: 25px 20px;
-    box-shadow: 0px 1px 5px 0.1px black;
-    background-color: whitesmoke;
     margin-bottom: 10px;
-}
-.header h1{
-    margin-left: 50px;
-    transition: ease-in-out 0.2s;
-}
-
-nav {
-    display: flex;
-    align-items: center;
 }
 
 .menu {
-    list-style: none;
+    width: 100%;
     display: flex;
-    margin-left: auto; /* Memindahkan ke kanan */
-}
-
-.menu li {
-    margin: 0 10px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 .menu a {
@@ -60,29 +48,45 @@ nav {
     cursor: pointer;
 }
 
-/* Responsif untuk layar kecil */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 30px;
+        height: fit-content;
+    }
     .menu {
         display: none;
         flex-direction: column;
-        background: whitesmoke;
+        row-gap: 5px;
         position: absolute;
-        top: 60px;
-        right: 20px;
-        width: fit-content;
-        height: auto;
-        text-align: center;
-        border-radius: 5px;
-        border: 1px solid black;
-        padding: 10px;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        background-color: white;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        transition: ease-in-out 0.3s;
+        flex-wrap: wrap;
+        border-radius: 10px;
     }
+
+
+
     .menu.active {
         display: flex;
+        transform: translateX(-50%) scale(1); /* Kembali ke ukuran normal */
+        opacity: 1;
     }
+
     .hamburger {
         display: block;
     }
+    
 }
+
 
 /* Konten Utama */
 .content1 {
@@ -93,6 +97,7 @@ nav {
     background-size: cover;
     color: whitesmoke;
     display: flex;
+    justify-content: center;
     align-items: center;
     justify-content: space-between;
     padding: 50px;
@@ -179,10 +184,11 @@ nav {
 }
 
 .kontainer {
+    display: flex;
     margin-top: 50px;
     flex-wrap: wrap;
-    display: flex;
     justify-content: space-around;
+    align-content: center;
     max-width: 100%;
     margin-bottom: 100px;
 }
@@ -217,6 +223,41 @@ nav {
     }
 }
 
+/* kontainer best seller */
+
+.kontainerbestseller{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 20px 30px;
+    margin-top: 3dvb;
+    margin-bottom: 30px;
+    max-width: 100%;
+}
+
+.kontainerbestseller img{
+    width: 300px;
+    height: 250px;
+    max-width: 100%;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.kontainerbestseller p {
+    display: flex;
+    align-items: center;
+    font-size: large;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .kontainerbestseller p {
+        font-size: large;
+        margin-top: 50px;
+    }
+    
+}
+
 /* tabel menu */
 
 .kontainertabel{
@@ -224,8 +265,8 @@ nav {
     max-width: 100%;
     height: fit-content;
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 10px;
 }
 
 .kontainertabel th{
@@ -245,13 +286,21 @@ nav {
 }
 
 .tabel1, .tabel2 {
+    width: fit-content;
     border: 1px solid;
     border-radius: 10px;
     background-color: whitesmoke;
 }
 
+.menumakanan {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 @media (max-width: 768px) {
     .tabel1, .tabel2{
+        width: 90%;
         max-width: 100%;
         padding: 0;
         margin: 0px auto;
@@ -292,12 +341,8 @@ nav {
     
 }
 
-/* end map iframe */
-
-/* lowongan */
-
 .lowongankerja {
-    width: fit-content;
+    width: 330px;
     height: fit-content;
     max-width: 100%;
     border-radius: 10px;
@@ -361,7 +406,7 @@ nav {
 
 
 .bagian2 {
-    margin: 0px auto;
+    margin: 0 0;
     max-width: 100%;
     justify-content: center;
 }
@@ -373,4 +418,20 @@ footer {
     margin-top: 100px;
     box-shadow: 0px 10px 10px 5px;
 }
+
+
+
+@media screen and (max-width: 768px) {
+    .map {
+        margin-top: 20px;
+    }
+
+    .lowongankerja {
+        width: 90%;
+    }
+}
+
+/* end map iframe */
+
+/* lowongan */
 
