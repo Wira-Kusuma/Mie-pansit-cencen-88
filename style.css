@@ -27,6 +27,7 @@ html, body {
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
+    gap: 10px;
 }
 
 .menu a {
@@ -62,22 +63,32 @@ html, body {
         flex-direction: column;
         row-gap: 5px;
         position: absolute;
+        z-index: 10;
         top: 100px;
         left: 50%;
         transform: translateX(-50%);
         width: 90%;
         background-color: white;
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
         transition: ease-in-out 0.3s;
         flex-wrap: wrap;
         border-radius: 10px;
+        padding: 10px;
+        
     }
 
-
+    .menu a{
+        background-color: whitesmoke;
+        display: flex;
+        width: 95%;
+        text-align: center;
+        justify-content: center;
+        
+    }
 
     .menu.active {
         display: flex;
-        transform: translateX(-50%) scale(1); /* Kembali ke ukuran normal */
+        transform: translateX(-50%) scale(1);
         opacity: 1;
     }
 
@@ -102,6 +113,7 @@ html, body {
     justify-content: space-between;
     padding: 50px;
     flex-wrap: wrap;
+    z-index: -1;
 }
 
 .content1 .teks {
@@ -109,10 +121,12 @@ html, body {
     font-size: larger;
     font-weight: bold;
     margin: auto auto;
-}
-
-.teks button{
-    margin-top: 30px;
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .content1 img {
@@ -120,6 +134,27 @@ html, body {
     max-width: 100%;
     margin-right: 30px;
     animation: spin 11s linear infinite;
+}
+
+.teks button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px red solid;
+    font-size: large;
+    background-color: transparent;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.teks button:hover {
+    transform: scale(0.95);
+    background-color: red;
+}
+
+.teks button:active {
+    background-color: red;
+    transform: scale(0.95);
 }
 
 @keyframes spin {
@@ -131,21 +166,7 @@ html, body {
     }
 }
 
-.teks button {
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    font-size: large;
-    background-color: red;
-    color: whitesmoke;
-    cursor: pointer;
-    transition: transform 0.2s, background 0.3s;
-}
 
-.teks button:hover {
-    transform: scale(0.95);
-    background-color: darkred;
-}
 
 /* Responsif untuk layar kecil */
 @media (max-width: 768px) {
@@ -159,6 +180,7 @@ html, body {
     
     .content1 {
         flex-direction: column;
+        justify-content: center;
         text-align: center;
         display: flex;
         flex-wrap: wrap;
@@ -179,7 +201,7 @@ html, body {
     }
 
     .teks button{
-        margin-top: 100px;
+        margin-top: 20px;
     }
 }
 
@@ -205,6 +227,7 @@ html, body {
     flex-wrap: wrap;
     background-color: whitesmoke;
     transition:0.2s ease-in-out;
+    cursor: pointer;
 }
 
 .kontainer .card:hover{
@@ -227,35 +250,70 @@ html, body {
 
 .kontainerbestseller{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
+    place-items: center;
     padding: 20px 30px;
     margin-top: 3dvb;
     margin-bottom: 30px;
     max-width: 100%;
 }
 
-.kontainerbestseller img{
-    width: 300px;
+.bestsellermenu img{
+    width: 270px;
     height: 250px;
-    max-width: 100%;
     border-radius: 10px;
-    margin-right: 10px;
+    align-self: center;
 }
 
-.kontainerbestseller p {
+.bestsellermenu {
     display: flex;
-    align-items: center;
-    font-size: large;
+    flex-direction: column;
+    row-gap: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1) ;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: left;
+    margin: 5px;
+    flex-wrap: wrap;
+    cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
+.bestsellermenu:hover {
+    border-color: black;
+}
+
+.bestsellermenu h2 {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.kontainerlokasi {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 700px) {
     
-    .kontainerbestseller p {
-        font-size: large;
-        margin-top: 50px;
+    .kontainerbestseller {
+        display: grid;
+        grid-template-columns: auto;
+        flex-direction: column;
+        row-gap: 20px;
+        justify-content: center;
+        align-items: center;
     }
     
+    .bestsellermenu:active{
+        border: black;
+    }
+
+    .bestsellermenu:hover{
+        border-color: none;
+    }
 }
 
 /* tabel menu */
@@ -325,32 +383,6 @@ html, body {
 /* end table */
 
 
-/* map iframe */
-.map {
-    height: fit-content;
-    max-height: fit-content;
-    max-width: fit-content;
-    margin: 0px auto;
-    border: 2px solid;
-    border-radius: 10px;
-    background-color: whitesmoke;
-    margin-bottom: 20px;
-}
-.map iframe{
-    margin: 10px;
-    
-}
-
-.lowongankerja {
-    width: 330px;
-    height: fit-content;
-    max-width: 100%;
-    border-radius: 10px;
-    border: 1px solid;
-    padding: 30px;
-    flex-wrap: wrap;
-    background-color: whitesmoke;
-}
 
 .lowongankerja li{
     margin: 5px;
