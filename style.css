@@ -101,7 +101,6 @@ html, body {
 
 /* Konten Utama */
 .content1 {
-    /* background-color: darkslategray; */
     background-image: url(img/Foto-rumah.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -114,6 +113,7 @@ html, body {
     padding: 50px;
     flex-wrap: wrap;
     z-index: -1;
+    height: 84vh;
 }
 
 .content1 .teks {
@@ -230,217 +230,18 @@ html, body {
     cursor: pointer;
 }
 
-.kontainer .card:hover{
-    transform: scale(1.1);
-    box-shadow: -1px 1px 5px 0.1px;
-    border: none;
-}
-
 @media (max-width: 768px) {
     .kontainer .card{
         margin-bottom: 20px;
     }
 
-    .kontainer .card:active{
-        transform: scale(1.1);
-    }
-}
-
-/* kontainer best seller */
-
-.kontainerbestseller{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    place-items: center;
-    padding: 20px 30px;
-    margin-top: 3dvb;
-    margin-bottom: 30px;
-    max-width: 100%;
-}
-
-.bestsellermenu img{
-    width: 270px;
-    height: 250px;
-    border-radius: 10px;
-    align-self: center;
-}
-
-.bestsellermenu {
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.1) ;
-    padding: 10px;
-    border-radius: 10px;
-    text-align: left;
-    margin: 5px;
-    flex-wrap: wrap;
-    cursor: pointer;
-}
-
-.bestsellermenu:hover {
-    border-color: black;
-}
-
-.bestsellermenu h2 {
-    text-align: left;
-    margin: 0;
-    padding: 0;
 }
 
 .kontainerlokasi {
+    width: 100%;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-@media screen and (max-width: 700px) {
-    
-    .kontainerbestseller {
-        display: grid;
-        grid-template-columns: auto;
-        flex-direction: column;
-        row-gap: 20px;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .bestsellermenu:active{
-        border: black;
-    }
-
-    .bestsellermenu:hover{
-        border-color: none;
-    }
-}
-
-/* tabel menu */
-
-.kontainertabel{
-    margin: 10px;
-    max-width: 100%;
-    height: fit-content;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.kontainertabel th{
-    padding: 10px;
-    /* border-bottom: 1px solid; */
-}
-
-.kontainertabel td{
-    padding: 10px;
-    width: fit-content;
-    height: fit-content;
-}
-
-.kontainertabel img{
-    border-radius: 10px;
-    margin-right: 10px;
-}
-
-.tabel1, .tabel2 {
-    width: fit-content;
-    border: 1px solid;
-    border-radius: 10px;
-    background-color: whitesmoke;
-}
-
-.menumakanan {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-@media (max-width: 768px) {
-    .tabel1, .tabel2{
-        width: 90%;
-        max-width: 100%;
-        padding: 0;
-        margin: 0px auto;
-    }
-
-    .kontainertabel{
-        margin: 0px;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .map{
-        margin: 0 auto;
-        margin-bottom: 20px;
-    }
-
-    .lowongankerja {
-        margin: 0px auto;
-        margin-bottom: 20px;
-    }
-}
-
-/* end table */
-
-
-
-.lowongankerja li{
-    margin: 5px;
-}
-
-/* end lowongan */
-
-/* form */
-
-.form {
-    background-color: whitesmoke;
-    margin-top: 50px;
-    align-items: center;
-    display: flex; /*Supaya bisa di bawah*/
-    flex-direction: column;
-    width: fit-content;
-    max-width: 100%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px 30px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px 0.5px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-
-}
-
-.form input{
-    width: 250px;
-    max-width: auto;
-    height: 40px;
-    margin: 10px 0px;
-    border-radius: 10px;
-    border: 0px;
-    box-shadow: 0px 0px 5px 0.1px;
-    text-align: center;
-}
-
-.form button{
-    width: 100px;
-    height: 30px;
-    border-radius: 10px;
-    border: 0px;
-    box-shadow: 0px 0px 10px 0.5px;
-    margin: 20px 0px;
-    font-weight: bold;
-    transition: transform 0.2s ease-in-out;
-}
-
-/* end form */
-
-
-
-.bagian2 {
-    margin: 0 0;
-    max-width: 100%;
     justify-content: center;
+    align-items: center;
 }
 
 footer {
@@ -453,17 +254,4 @@ footer {
 
 
 
-@media screen and (max-width: 768px) {
-    .map {
-        margin-top: 20px;
-    }
-
-    .lowongankerja {
-        width: 90%;
-    }
-}
-
-/* end map iframe */
-
-/* lowongan */
 
