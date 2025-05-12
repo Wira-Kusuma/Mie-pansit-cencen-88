@@ -218,7 +218,7 @@ html, body {
 .kontainer .card{
     text-align: center;
     border-radius: 10px;
-    border: 1px solid;
+    border: 2px solid;
     max-width: 100%;
     width:300px;
     height:160px;
@@ -227,7 +227,6 @@ html, body {
     flex-wrap: wrap;
     background-color: whitesmoke;
     transition:0.2s ease-in-out;
-    cursor: pointer;
 }
 
 @media (max-width: 768px) {
