@@ -63,25 +63,6 @@
         </div>
     </div>
 
-    <!-- JavaScript -->
-    <script>
-        function toggleMenu() {
-            document.querySelector(".menu").classList.toggle("active");
-        }
-
-        function toggleMenu() {
-            let menu = document.querySelector(".menu");
-            menu.classList.toggle("active");
-        }
-
-        // Menutup menu ketika salah satu item diklik
-        document.querySelectorAll(".menu a").forEach(item => {
-            item.addEventListener("click", () => {
-                document.querySelector(".menu").classList.remove("active");
-            });
-        });
-    </script>
-
 
     <div class="kontainer">
         <div class="card">
@@ -124,10 +105,16 @@
     
     <div class="feedback">
         <h4>Berikan Saran untuk restoran</h4>
-        <form action="feedback.php">
-            <textarea name="feedback" id="feedback"></textarea>
-            <button type="submit">kirim</button>
-        </form>
+        <textarea name="feedback" id="feedback"></textarea>
+        <button onclick="kirim()">kirim</button>
+    </div>
+
+    <div class="bgNotif" id="notif">
+        <div class="notif">
+            <h3>Terima kasih atas sarannya</h3>
+            <p>Saran anda akan segera dibaca</p>
+            <button onclick="tutup()">OK</button>
+        </div>
     </div>
 
     <footer>
@@ -137,5 +124,6 @@
         </p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
