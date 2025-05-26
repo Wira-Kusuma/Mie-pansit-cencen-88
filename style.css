@@ -17,7 +17,13 @@ html, body {
     justify-content: space-between;
     align-items: center;
     padding: 25px 20px;
-    margin-bottom: 10px;
+    user-select: none;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .menu {
@@ -34,12 +40,15 @@ html, body {
     color: black;
     text-decoration: none;
     border-radius: 10px;
-    padding: 5px 15px;
+    padding: 5px 25px;
     transition: background 0.3s;
+    user-select: none;
+    transition: ease-in-out 0.3s;
 }
 
 .menu a:hover {
     background-color: lightgray;
+    transform: translateY(-5px);
 }
 
 /* Hamburger Menu (untuk layar kecil) */
@@ -83,7 +92,6 @@ html, body {
         width: 95%;
         text-align: center;
         justify-content: center;
-        
     }
 
     .menu.active {
@@ -107,13 +115,11 @@ html, body {
     background-size: cover;
     color: whitesmoke;
     display: flex;
-    justify-content: center;
     align-items: center;
     justify-content: space-between;
-    padding: 50px;
     flex-wrap: wrap;
     z-index: -1;
-    height: 84vh;
+    height: 100vh;
 }
 
 .content1 .teks {
@@ -122,18 +128,24 @@ html, body {
     font-weight: bold;
     margin: auto auto;
     backdrop-filter: blur(10px);
-    padding: 10px;
+    padding: 30px;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    user-select: none;
+    position: relative;
+    left: -100px;
 }
 
 .content1 img {
-    width: 400px;
+    width: 300px;
     max-width: 100%;
     margin-right: 30px;
     animation: spin 11s linear infinite;
+    user-select: none;
+    position:relative;
+    right: 150px;
 }
 
 .teks button {
