@@ -42,6 +42,7 @@ html, body {
     border-radius: 10px;
     padding: 5px 25px;
     transition: background 0.3s;
+    transition: scroll 0.3s;
     user-select: none;
     transition: ease-in-out 0.3s;
 }
@@ -58,7 +59,7 @@ html, body {
     cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
 
     .header{
         display: flex;
@@ -156,7 +157,7 @@ html, body {
     background-color: rgba(255, 0, 0, 0.5);
     color: whitesmoke;
     cursor: pointer;
-    transition: transform 0.2s, background 0.3s;
+    transition: ease-in-out 0.2s, background 0.3s;
 }
 
 .teks button:hover {
@@ -181,7 +182,7 @@ html, body {
 
 
 /* Responsif untuk layar kecil */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .header h1{
         width: 60%;
         margin-left: 0px;
@@ -202,10 +203,16 @@ html, body {
         padding: 20px;
         font-size: larger;
         margin-top: 20px;
+        position: relative;
+        top: 250px;
+        left: 0px;
     }
     .content1 img {
         width: 250px;
         margin: auto auto;
+        position: relative;
+        bottom: 200px;
+        left: 10px;
     }
 
     .content1 img:hover {
