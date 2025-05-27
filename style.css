@@ -57,7 +57,7 @@ html, body {
     font-size: 28px;
     display: none;
     cursor: pointer;
-}
+} 
 
 @media screen and (max-width: 900px) {
 
@@ -71,24 +71,26 @@ html, body {
     .menu {
         display: none;
         flex-direction: column;
-        row-gap: 5px;
+        row-gap: 10px;
         position: absolute;
         z-index: 10;
-        top: 100px;
+        top: 130px;
         left: 50%;
         transform: translateX(-50%);
-        width: 90%;
-        background-color: white;
+        width: 97%;
+        background-color: rgba(255, 255, 255, 0.5);
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
         transition: ease-in-out 0.3s;
         flex-wrap: wrap;
-        border-radius: 10px;
-        padding: 10px;
+        border-radius: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         
     }
 
     .menu a{
         background-color: whitesmoke;
+        padding: 20px;
         display: flex;
         width: 95%;
         text-align: center;
@@ -97,7 +99,7 @@ html, body {
 
     .menu.active {
         display: flex;
-        transform: translateX(-50%) scale(1);
+        transform: scale(0);
         opacity: 1;
     }
 
@@ -128,7 +130,7 @@ html, body {
     font-size: larger;
     font-weight: bold;
     margin: auto auto;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     padding: 30px;
     border-radius: 30px;
     display: flex;
@@ -146,7 +148,7 @@ html, body {
     animation: spin 11s linear infinite;
     user-select: none;
     position:relative;
-    right: 150px;
+    right: 50px;
 }
 
 .teks button {
@@ -203,16 +205,16 @@ html, body {
         padding: 20px;
         font-size: larger;
         margin-top: 20px;
-        position: relative;
-        top: 250px;
+        top: 200px;
         left: 0px;
     }
     .content1 img {
         width: 250px;
         margin: auto auto;
         position: relative;
-        bottom: 200px;
+        bottom: 100px;
         left: 10px;
+        display: none;
     }
 
     .content1 img:hover {
@@ -308,6 +310,23 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
+@keyframes fadeScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.bgNotif.flex-show {
+  display: flex;
+  animation: fadeScaleIn 0.3s ease forwards;
+}
+
 
 .notif {
     text-align: center;
