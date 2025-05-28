@@ -309,24 +309,14 @@ footer {
     height: 100%;
     justify-content: center;
     align-items: center;
-}
-
-@keyframes fadeScaleIn {
-  from {
+    transition: opacity 0.3s ease;
     opacity: 0;
-    transform: scale(0);
-  }
-  to {
+}
+
+.bgNotif.show {
+    display: flex;
     opacity: 1;
-    transform: scale(1);
-  }
 }
-
-.bgNotif.flex-show {
-  display: flex;
-  animation: fadeScaleIn 0.3s ease forwards;
-}
-
 
 .notif {
     text-align: center;
@@ -338,7 +328,13 @@ footer {
     border: 1px solid black;
     padding: 30px;
     background-color: white;
-}   
+    transition: transform 0.3s ease;
+    transform: scale(0.1);
+}
+
+.notif.show {
+    transform: scale(1);
+}
 
 .notif button {
     width: 150px;
@@ -346,5 +342,3 @@ footer {
     align-self: center;
     border-radius: 10px;
 }
-
-

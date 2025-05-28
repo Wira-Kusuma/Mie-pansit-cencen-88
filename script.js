@@ -21,18 +21,41 @@ document.querySelectorAll(".menu a").forEach(item => {
 });
 
 function kirim() {
-    let notif = document.getElementById("notif");
+    const bg = document.getElementById("notif");
+    const box = bg.querySelector(".notif");
 
-    // Hapus animasi sebelumnya jika ada
-    notif.classList.remove("flex-show");
-    void notif.offsetWidth; // reflow agar animasi bisa diulang
+    // Reset jika sebelumnya sudah ditampilkan
+    box.classList.remove("show");
+    bg.classList.remove("show");
 
-    notif.classList.add("flex-show");
+    // Tampilkan ulang
+    bg.style.display = "flex";
+    bg.classList.add("show");
+
+    setTimeout(() => {
+        box.classList.add("show");
+    }, 10);
+
+    setTimeout(() => {
+        bg.function (tutup())
+    },5000)
 }
 
 
 function tutup() {
-    let notif = document.getElementById("notif");
+    const bg = document.getElementById("notif");
+    const box = bg.querySelector(".notif");
 
-    notif.style.display="none";
+    // 1. Tutup animasi scale box
+    box.classList.remove("show");
+
+    // 2. Tutup animasi fade latar
+    bg.classList.remove("show");
+
+    // 3. Setelah transisi selesai, reset semua
+    setTimeout(() => {
+        bg.style.display = "none";
+    }, 300); // durasi sama dengan transition di CSS
 }
+
+
