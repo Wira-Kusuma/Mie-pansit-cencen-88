@@ -55,8 +55,8 @@ function kirim() {
         detik.innerHTML="1";
     },4000)
     setTimeout(() => {
-        detik.innerHTML="0";
-    },4990)
+        detik.innerHTML="5";
+    },4999)
 }
 
 
