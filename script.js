@@ -39,6 +39,24 @@ function kirim() {
     setTimeout(() => {
         bg.function (tutup())
     },5000)
+
+    let detik = document.getElementById("detik");
+
+    setTimeout(() => {
+        detik.innerHTML="4";
+    },1000)
+    setTimeout(() => {
+        detik.innerHTML="3";
+    },2000)
+    setTimeout(() => {
+        detik.innerHTML="2";
+    },3000)
+    setTimeout(() => {
+        detik.innerHTML="1";
+    },4000)
+    setTimeout(() => {
+        detik.innerHTML="0";
+    },4990)
 }
 
 
