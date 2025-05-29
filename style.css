@@ -259,6 +259,16 @@ html, body {
     transition:0.2s ease-in-out;
 }
 
+.k1 {
+    transform: perspective(1000px) scaleZ(1) rotateY(20deg);
+}
+.k2:hover {
+    transform: perspective(1000px) scaleZ(1) rotateX(20deg);
+}
+.k3 {
+    transform: perspective(1000px) scaleZ(1) rotateY(-20deg);
+}
+
 @media (max-width: 768px) {
     .kontainer .card{
         margin-bottom: 20px;
