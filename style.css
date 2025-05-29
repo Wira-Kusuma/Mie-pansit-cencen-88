@@ -145,11 +145,27 @@ html, body {
     width: 300px;
     max-width: 100%;
     margin-right: 30px;
-    animation: spin 11s linear infinite;
+    animation: scale 1.5s infinite;
     user-select: none;
     position:relative;
     right: 50px;
 }
+
+@keyframes scale {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  20% {
+    transform: scale(1.05) rotate(60deg);
+  }
+  40% {
+    transform: scale(1) rotate(0deg);
+  }
+  60% {
+    transform: scale(1) rotate(-60deg);
+  }
+}
+
 
 .teks button {
     padding: 10px;
@@ -172,14 +188,7 @@ html, body {
     transform: scale(0.95);
 }
 
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
+
 
 
 
