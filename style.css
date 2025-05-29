@@ -137,7 +137,7 @@ html, body {
     flex-direction: column;
     gap: 20px;
     user-select: none;
-    position: relative;
+    position:relative;
     left: -100px;
 }
 
