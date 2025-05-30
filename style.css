@@ -153,16 +153,16 @@ html, body {
 
 @keyframes scale {
   0%, 100% {
-    transform: scale(1) rotate(0deg);
+    transform: translateX(0px) rotate(0deg);
   }
-  20% {
-    transform: scale(1.05) rotate(60deg);
+  30% {
+    transform: translateX(5px) rotate(5deg);
   }
-  40% {
-    transform: scale(1) rotate(0deg);
+  55% {
+    transform: translateX(-5px) rotate(-5deg);
   }
-  60% {
-    transform: scale(1) rotate(-60deg);
+  75% {
+    transform: translateX(5px) rotate(5deg);
   }
 }
 
@@ -221,9 +221,8 @@ html, body {
         width: 250px;
         margin: auto auto;
         position: relative;
-        bottom: 100px;
+        bottom: 30px;
         left: 10px;
-        display: none;
     }
 
     .content1 img:hover {
@@ -300,6 +299,8 @@ form {
 .feedback textarea {
     min-width: 50%;
     min-height: 100px;
+    padding: 10px;
+    border: 2px solid;
 }
 
 .feedback button {
