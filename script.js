@@ -1,7 +1,10 @@
+// nav
+
 function toggleMenu() {
     let kotak = document.getElementById("menu");
 
     document.querySelector(".menu").classList.toggle("active");
+
 }
 
 function toggleMenu() {
@@ -9,16 +12,15 @@ function toggleMenu() {
     menu.classList.toggle("active");
 }
 
-setTimeout(() => {
-    menu.classList.add("muncul");
-  }, 10);
-
 // Menutup menu ketika salah satu item diklik
 document.querySelectorAll(".menu a").forEach(item => {
     item.addEventListener("click", () => {
         document.querySelector(".menu").classList.remove("active");
     });
 });
+
+// nav
+
 
 function kirim() {
     const bg = document.getElementById("notif");

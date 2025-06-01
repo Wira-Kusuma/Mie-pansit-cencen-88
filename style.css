@@ -39,6 +39,7 @@ html, body {
 .menu a {
     color: black;
     text-decoration: none;
+    font-weight: bold;
     border-radius: 10px;
     padding: 5px 25px;
     transition: background 0.3s;
@@ -99,8 +100,6 @@ html, body {
 
     .menu.active {
         display: flex;
-        transform: scale(0);
-        opacity: 1;
     }
 
     .hamburger {
@@ -153,7 +152,7 @@ html, body {
 
 @keyframes scale {
   0%, 100% {
-    transform: translateX(0px) rotate(0deg);
+    transform: translateX(-5px) rotate(-5deg);
   }
   30% {
     transform: translateX(5px) rotate(5deg);
