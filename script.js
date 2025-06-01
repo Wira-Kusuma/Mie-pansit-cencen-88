@@ -38,11 +38,14 @@ function kirim() {
         box.classList.add("show");
     }, 10);
 
-    setTimeout(() => {
-        bg.function (tutup())
-    },5000)
+    // auto close
+    
+    
+
+    // countdown
 
     let detik = document.getElementById("detik");
+    detik
 
     setTimeout(() => {
         detik.innerHTML="4";
@@ -58,7 +61,8 @@ function kirim() {
     },4000)
     setTimeout(() => {
         detik.innerHTML="5";
-    },4999)
+        bg.function (tutup());
+    },5000)
 }
 
 
@@ -76,6 +80,17 @@ function tutup() {
     setTimeout(() => {
         bg.style.display = "none";
     }, 300); // durasi sama dengan transition di CSS
+
+    let waktu = document.getElementById("detik");
+    detik
+    let tutup = document.getElementById("tutup");
+    detik
+
+    tutup.addEventListener('click', resetdetik);
+
+    function resetdetik() {
+        waktu.innerHTML="5";
+    }
 }
 
 

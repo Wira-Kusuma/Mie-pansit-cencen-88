@@ -19,7 +19,7 @@ html, body {
     padding: 25px 20px;
     user-select: none;
     position: absolute;
-    z-index: 1000;
+    z-index: 1;
     top: 0;
     left: 0;
     right: 0;
@@ -39,7 +39,6 @@ html, body {
 .menu a {
     color: black;
     text-decoration: none;
-    font-weight: bold;
     border-radius: 10px;
     padding: 5px 25px;
     transition: background 0.3s;
