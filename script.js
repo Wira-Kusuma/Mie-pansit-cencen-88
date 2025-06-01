@@ -19,7 +19,8 @@ document.querySelectorAll(".menu a").forEach(item => {
     });
 });
 
-// nav
+// nav with smooth scroll into destination
+
 
 
 function kirim() {
@@ -40,7 +41,7 @@ function kirim() {
 
     // auto close
     
-    
+
 
     // countdown
 
