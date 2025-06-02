@@ -175,6 +175,8 @@ html, body {
     color: whitesmoke;
     cursor: pointer;
     transition: ease-in-out 0.2s, background 0.3s;
+    animation: scale 1.5s infinite;
+
 }
 
 .teks button:hover {
