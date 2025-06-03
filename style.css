@@ -1,11 +1,14 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 html, body {
+    margin: 0;
+    padding: 0;
     height: 100%;
     background-color: white;
     overflow-x: hidden;
@@ -25,6 +28,7 @@ html, body {
     left: 0;
     right: 0;
     background-color: rgba(255, 255, 255, 0.5);
+    height: 80px;
 }
 
 .menu {
@@ -107,93 +111,38 @@ html, body {
     }
     
 }
-
+/* nav area */
 
 /* Konten Utama */
 .content1 {
     background-image: url(img/Foto-rumah.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    color: whitesmoke;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     z-index: -1;
     height: 100vh;
+    
 }
 
-.content1 .teks {
-    width: fit-content;
-    font-size: larger;
+.content1 p {
+    font-size: 40px;
     font-weight: bold;
-    margin: auto auto;
-    backdrop-filter: blur(5px);
-    padding: 30px;
-    border-radius: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    user-select: none;
-    position:relative;
-    left: -100px;
+    color: white;
+    backdrop-filter: blur(10px);
+    width: 50%;
+    padding: 20px;
+    box-shadow:inset 0 0 20px 10px none;
+    border-radius: 10px;
+    margin-left: 10%;
 }
 
-.content1 img {
-    width: 300px;
-    max-width: 100%;
-    margin-right: 30px;
-    animation: scale 1.5s infinite;
-    user-select: none;
-    position:relative;
-    right: 50px;
-}
-
-@keyframes scale {
-  0%, 100% {
-    transform: translateX(-5px) rotate(-5deg);
-  }
-  30% {
-    transform: translateX(5px) rotate(5deg);
-  }
-  55% {
-    transform: translateX(-5px) rotate(-5deg);
-  }
-  75% {
-    transform: translateX(5px) rotate(5deg);
-  }
+.desk {
+    font-size: 20px;
 }
 
 
-.teks button {
-    padding: 10px;
-    border-radius: 5px;
-    border: 2px red solid;
-    font-size: large;
-    background-color: rgba(255, 0, 0, 0.5);
-    color: whitesmoke;
-    cursor: pointer;
-    transition: ease-in-out 0.2s, background 0.3s;
-    animation: scale 1.5s infinite;
-
-}
-
-.teks button:hover {
-    transform: scale(0.95);
-    background-color: red;
-}
-
-.teks button:active {
-    background-color: red;
-    transform: scale(0.95);
-}
-
-
-
-
-
-/* Responsif untuk layar kecil */
 @media (max-width: 900px) {
     .header h1{
         width: 60%;
@@ -203,78 +152,35 @@ html, body {
         margin-bottom: 20px;
     }
     
-    .content1 {
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .content1 .teks {
-        max-width: 100%;
-        padding: 20px;
-        font-size: larger;
-        margin-top: 20px;
-        top: 200px;
-        left: 0px;
-    }
-    .content1 img {
-        width: 250px;
-        margin: auto auto;
-        position: relative;
-        bottom: 30px;
-        left: 10px;
-    }
-
-    .content1 img:hover {
-        transform: none;
-    }
-
-    .teks button{
-        margin-top: 20px;
-    }
 }
 
-.kontainer {
+.review {
+    width: 100%;
     display: flex;
-    margin-top: 50px;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: center;
-    max-width: 100%;
-    margin-bottom: 100px;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
 }
 
-.kontainer .card{
-    text-align: center;
-    border-radius: 10px;
-    border: 2px solid;
-    max-width: 100%;
-    width:300px;
-    height:160px;
-    padding: 20px;
-    margin: 10px;
-    flex-wrap: wrap;
-    background-color: whitesmoke;
-    transition:0.2s ease-in-out;
+.user {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px;
+    border-bottom: 1px solid;
 }
 
-.k1 {
-    transform: perspective(1000px) scaleZ(1) rotateY(20deg);
-}
-.k2:hover {
-    transform: perspective(1000px) scaleZ(1) rotateX(20deg);
-}
-.k3 {
-    transform: perspective(1000px) scaleZ(1) rotateY(-20deg);
+.part1 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
 
-@media (max-width: 768px) {
-    .kontainer .card{
-        margin-bottom: 20px;
-    }
-
+.part1 img {
+    width: 50px;
 }
+
 
 .kontainerlokasi {
     width: 100%;
@@ -289,12 +195,6 @@ html, body {
     flex-direction: column;
     row-gap: 20px;
     width: 80%;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
 }
 
 .feedback textarea {
