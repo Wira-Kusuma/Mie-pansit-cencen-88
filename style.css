@@ -188,14 +188,13 @@ html, body {
         display: flex;
         justify-content: center;
         align-items: center;
-        
     }
 
     .container-tentang {
+        margin-top: 0px;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        text-align: center;
     }
     .tentang h1, .tentang p {
         text-align: center;
