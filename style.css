@@ -7,12 +7,13 @@
 body,html {
     margin: 0;
     padding: 0;
-    height: 100vh;
     width: 100%;
     overflow-x: hidden;
+    overflow-y:auto;
     user-select: none;
     scroll-behavior: smooth;
     background-color: whitesmoke;
+    display: block;
 }
 
 /* header */
@@ -116,6 +117,7 @@ main {
     align-items: center;
     text-align: center;
     width: 100%;
+    height: 85vh;
     margin-top: 20px;
 }
 
@@ -132,3 +134,18 @@ main h1 {
 }
 
 /* end main */
+
+/* sec1 about us*/
+
+.sec1 {
+    width: 95%;
+    background-color: white;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
