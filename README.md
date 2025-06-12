@@ -12,6 +12,7 @@ The official website for Mie Pansit Cencen 88. This project aims to provide comp
 - Online ordering (to be added)
 - Responsive design: optimized display for various devices (reference devices listed below and in the following image: 
 ![alt text](image-1.png)
+![alt text](image.png)
 
 ---
 
