@@ -10,7 +10,8 @@ The official website for Mie Pansit Cencen 88. This project aims to provide comp
 - Store locations and operating hours
 - Latest promotions and news
 - Online ordering (to be added)
-- Responsive design: optimized display for various devices (reference devices listed below and in the following image: ![image1](image1))
+- Responsive design: optimized display for various devices (reference devices listed below and in the following image: 
+![alt text](image-1.png)
 
 ---
 
