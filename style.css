@@ -137,7 +137,7 @@ main h1 {
 
 /* sec1,sec2*/
 
-.sec1,.sec2 {
+.sec1,.sec2,.sec3 {
     width: 95%;
     background-color: white;
     margin: 50px auto;
