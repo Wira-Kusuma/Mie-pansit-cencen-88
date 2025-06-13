@@ -137,7 +137,7 @@ main h1 {
 
 /* sec1,sec2*/
 
-.sec1,.sec2,.sec3 {
+.section {
     width: 95%;
     background-color: white;
     margin: 50px auto;
@@ -176,8 +176,44 @@ main h1 {
     box-shadow: 0 12px 32px -4px rgba(0,0,0,0.22), 0 3px 12px 0 rgba(0,0,0,0.14);
 }
 
+.section-1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.testimoni {
+    width: 40%;
+    align-self: flex-start;
+    margin: 20px;
+    padding: 10px;
+    border-bottom: 1px solid;
+}
+
+.s1 img {
+    width: 50px;
+}
+
+.s1 {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.s2 {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+
 @media (max-width: 700px) {
     .about {
+        width: 90%;
+    }
+
+    .testimoni {
         width: 90%;
     }
 }
