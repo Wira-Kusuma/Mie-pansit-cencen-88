@@ -208,12 +208,31 @@ main h1 {
     text-align: left;
 }
 
+
+
+/* footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 @media (max-width: 700px) {
     .about {
         width: 90%;
     }
 
     .testimoni {
+        width: 90%;
+    }
+
+    footer {
+        margin-bottom: 60px;
+    }
+
+    iframe {
         width: 90%;
     }
 }
