@@ -135,9 +135,9 @@ main h1 {
 
 /* end main */
 
-/* sec1 about us*/
+/* sec1,sec2*/
 
-.sec1 {
+.sec1,.sec2 {
     width: 95%;
     background-color: white;
     margin: 50px auto;
@@ -153,6 +153,38 @@ main h1 {
 
 .about {
     width: 50%;
+}
+
+.galeri {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.galeri img {
+    max-width: 80%;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 6px 24px -4px rgba(0,0,0,0.18), 0 1.5px 6px 0 rgba(0,0,0,0.10);
+    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.galeri img:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 12px 32px -4px rgba(0,0,0,0.22), 0 3px 12px 0 rgba(0,0,0,0.14);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 700px) {
